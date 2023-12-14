@@ -1,0 +1,160 @@
+/*
+Рекомендуемое ПО: Atom (ООО «ВК»), Яндекс Браузер (ООО "Яндекс").
+Сделано в Российской Федерации. Адрес производителя - Республика Саха (Якутия), 
+Нижнеколымский район, поселок Черский, Ул.Таврата, дом 12, кватира 15.
+Электронная почта по приему претензий: aircgroupstudio@gmail.com.
+
+СЗ ФЛ Имаев Артемий Дмитриевич.
+*/
+
+body {
+	margin: 0;
+	font-family: basic;
+	background-color: #d3d3d3;
+	color: white;
+}
+
+@font-face {
+    font-family: basic; 
+    src: url("comic.ttf"); 
+}
+
+@font-face {
+	font-family: title; 
+	src: url("main.ttf"); 
+}
+
+@keyframes startBack {
+	from {
+		background-image: url("1.avif");
+	}
+	to {
+		background-image: url("2.avif");
+	}
+}
+
+.first-card {
+	z-index: -3;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: white;
+	text-align: center;
+	align-items: center;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	transition: all 0.4s ease 0s;
+	text-shadow: black 0 0 3px;
+	-webkit-transition: background-image 0.2s ease-in-out; 
+	transition: background-image 0.2s ease-in-out;
+	animation: startBack 3s linear;
+	background-image: url("2.avif");
+	background-attachment: fixed;
+}
+
+.quote {
+	font-size: 30px;
+	opacity: 0;
+}
+
+.author {
+	font-size: 20px;
+	opacity: 0;
+}
+
+.title {
+	font-family: title;
+	font-size: 50px;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	background-color: #d3d3d3;
+}
+
+.screenblock {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	align-items: center;
+	justify-content: center;
+}
+
+.ShadowGrandient {
+	box-shadow: 0 0 80vh 0 #d3d3d3;
+}
+
+.trailer {
+	width: 70vw;
+	border: 0px solid #000;
+	border-radius: 30px;
+}
+
+.description {
+	text-align: justify;
+	width: 70vw;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.owl-carousel {
+	max-width: 70vw;
+	margin: auto;
+}
+
+details {
+	width: 70vw;
+}
+
+details summary {
+	list-style: none;
+}
+
+details p img {
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+}
+
+@media only screen and (min-width: 801px){
+	* {
+		font-size: 25px;
+	}
+}
+
+@media only screen and (max-width: 800px){
+	* {
+		font-size: 25px;
+	}
+	.description {
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	.screenblock {
+		min-height: 0px;
+	}
+	.owl-carousel {
+		max-width: 90vw;
+	}
+	.description {
+		width: 90vw;
+	}
+	.trailer {
+		width: 90vw;
+	}
+	details {
+		width: 90vw;
+	}
+}
+
+@media only screen and (max-width: 550px){
+	* {
+		font-size: 15px;
+	}
+}
