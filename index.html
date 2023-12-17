@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>DDLC: Клуб Выживания</title>
+	<title>Клуб Выживания</title>
 	<link rel="icon" href="logo.avif">
 	<script type="text/javascript" src="jquery.js" defer></script>
 	<script type="text/javascript" src="common.js" defer></script>
@@ -23,7 +23,7 @@
 				<li><a href="#screenshots">Скриншоты</a></li>
 				<li><a href="#download">Скачать</a></li>
 				<li><a href="#QA">Ответы</a></li>
-				
+				<button class="langChange">English</button>
 			</ul>
 		</nav>
 		
@@ -67,17 +67,16 @@
 	
 
 	<div class="card">
-		<p class="uridicheskayinfo">Сайленс Тим,<br>
-		Российская Федерация</p>
+		<p class="uridicheskayinfo">Сайленс Тим<br>СНГ</p>
 	</div>
 </body>
 <script type="text/javascript">
 	let language = navigator.languages;
-	console.log(navigator.languages)
 
 	if ("ru" == language[0] || "ru-RU" == language[0]) {}
 	else {
-		document.querySelector('title').innerHTML = "DDLC: Survival Club"
+		document.querySelector('title').innerHTML = "Survival Club"
+		document.querySelector('.title').innerHTML = "Survival Club"
 		document.querySelector('.quote').innerHTML = "Sometimes even to live is an act of courage.";
 		document.querySelector('.author').innerHTML = "- Seneca";
 		document.querySelector('.description').innerHTML = "In this modification, you will play on behalf of Sayori in the survival club, where she and all the other members of the club will have fun. As the story progresses, you will have to make fateful choices that will affect the course of the game, so be more vigilant.";
@@ -86,11 +85,12 @@
 		document.querySelector('.a1').innerHTML = "8 hours";
 		document.querySelector('.q2').innerHTML = "Who are developer modification?";
 		document.querySelector('.a2').innerHTML = "Teams from Russia with partners from others country: Lager Team, AircGroup Studio";
-		document.querySelector('.uridicheskayinfo').innerHTML = "Silence Team<br>Russia Federation";
-		let fastMenu = ["Trailer", "Screenshots", "Download", "Answers"];
+		document.querySelector('.uridicheskayinfo').innerHTML = "Silence Team<br>CIS";
+		let fastMenu = ["Trailer", "Screenshots", "Download", "Answers", "EN"];
 		for (let i = 0; i < document.querySelectorAll(".menu_ul li a").length;i++){
 			document.querySelectorAll(".menu_ul li a")[i].innerHTML = fastMenu[i]
 		}
+		document.querySelector(".langChange").innerHTML = "Русский"
 	}
 </script>
 </html>

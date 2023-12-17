@@ -74,6 +74,7 @@ a{
 .menu {
 	padding-left: 10px;
 	flex-grow: 1;
+	color: #000
 }
 
 .menu ul {
@@ -89,9 +90,8 @@ a{
 .menu a {
 	display: block;
 	font-family: title;
-	padding: 8px 10px;
 	text-transform: uppercase;
-	letter-spacing: .27em;
+	letter-spacing: .10em;
 	transition: 0.6s ease-out;
 	color: #000;
 }
@@ -101,8 +101,26 @@ a{
 }
 
 .menu ul li {
-	font-size: 20px;
-	padding-left: 50px;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	width: 175px;
+	height: 50px;
+}
+
+.langChange {
+	font-family: title;
+	background-color: #FFF6F7;
+	border: solid 0px #000;
+	transition: 0.6s ease-out;
+	text-transform: uppercase;
+	letter-spacing: .10em;
+}
+
+.langChange:hover {
+	color: #A3A3A3;
+	animation-delay: 1;
 }
 
 .first-card {
@@ -214,7 +232,7 @@ details p {
 	width: 70vw;
 	margin-top: 50px;
 	margin-bottom: 50px;
-	font-size: 10px;
+	font-size: 12px;
 }
 
 @media only screen and (min-width: 801px){
@@ -249,6 +267,8 @@ details p {
 		margin-right: 10px;
 		border: solid 0px #000;
 		border-width: 0 0 1px 0;
+		text-align: left;
+		justify-content: left;
 	}
 	.menu{
 		display: block;
@@ -258,6 +278,15 @@ details p {
 	}
 	.fixed-page {
 		overflow: hidden;
+	}
+	.langChange {
+		text-align: left;
+		margin-right: 10px;
+		padding: 0px;
+		border: solid 0px #000;
+		border-width: 0 0 1px 0;
+		height: 50px;
+		width: 175px;
 	}
 }
 
