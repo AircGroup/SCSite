@@ -10,7 +10,7 @@ $('.langChange').click(function(){
 	if (document.querySelector('.langChange').innerHTML == "English") {
 		document.querySelector('title').innerHTML = "Survival Club"
 		document.querySelector('.title').innerHTML = "Survival Club"
-		document.querySelector('.quote').innerHTML = "Sometimes even to live is an act of courage.";
+		document.querySelector('.quote').innerHTML = "«Sometimes even to live is an act of courage.»";
 		document.querySelector('.author').innerHTML = "- Seneca";
 		document.querySelector('.description').innerHTML = "In this modification, you will play on behalf of Sayori in the survival club, where she and all the other members of the club will have fun. As the story progresses, you will have to make fateful choices that will affect the course of the game, so be more vigilant.";
 		document.querySelector('.dateexit').innerHTML = "Release date<br>Soon";
