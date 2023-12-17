@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Модификации на DDLC</title>
+	<title>DDLC: Клуб Выживания</title>
 	<link rel="icon" href="logo.avif">
 	<script type="text/javascript" src="jquery.js" defer></script>
 	<script type="text/javascript" src="common.js" defer></script>
@@ -13,34 +13,84 @@
 	<link rel="stylesheet" href="owl.theme.default.min.css">
 </head>
 <body>
+	<header id="header">
+		<div class="logo">
+			<img src="logo.avif" alt="Логотип" width="100%" height="100%" />
+		</div>
+		<nav class="menu">
+			<ul class="menu_ul">
+				<li><a href="#trailer">Трейлер</a></li>
+				<li><a href="#screenshots">Скриншоты</a></li>
+				<li><a href="#download">Скачать</a></li>
+				<li><a href="#QA">Ответы</a></li>
+				
+			</ul>
+		</nav>
+		
+	</header>
 	<div class="first-card">
 		<blockquote class="quote">«Иногда даже на то, чтобы жить, нужно мужество»</blockquote>
 		<div class="author">- Лу́ций Анне́й Се́не́ка</div>
 	</div>
 	<div class="screenblock">
 		<div class="card ShadowGrandient">
-			<h1 class="title">Survival Club</h1>
+			<a name="trailer"></a>
+			<h1 class="title">Клуб Выживания</h1>
 			<img src="3.avif" class="trailer">
 		</div>
 		<div class="card">
 			<p class="description">В данной модификации вам предстоит играть от лица Сайори в клубе выживания, в котором она и все остальные члены клуба будут весело проводить время. По ходу сюжета вам придётся делать судьбоносные выборы, которые повлияют на ход игры, так что будьте бдительнее.</p>
 		</div>
 	</div>
+	<span class="anchor" id="screenshots"></span>
 	<div class="owl-carousel owl-theme">
 		<img src="4.avif" class="photogallery">
 		<img src="5.avif" class="photogallery">
 		<img src="6.avif" class="photogallery">
 	</div>
-	<div class="card" style="flex-direction: column;">
-		
+	<span class="anchor" id="download"></span>
+	<div class="end card" >
+		<p class="dateexit" style="text-align: center;">Дата выхода<br>Скоро</p>
+	</div>
+	<div class="card" style="flex-direction: column; margin-top: 20px; margin-bottom: 20px;">
+		<span class="anchor" id="QA"></span>
 		<details open>
-			<summary><h1>Разработчик</h1></summary>
-			<p><img src="st.avif"><img src="lt.avif"><img src="ag.avif"></p>
+			<summary class="q1">Насколько расчитанно прохождение?</summary>
+			<p class="a1">Около 8 часов</p>
 		</details>
 		<details open>
-			<summary><h1>Издатель</h1></summary>
-			<p><img src="tot.avif"><img src="st.avif"></p>
+			<summary class="q2">Кто разрабатывает мод?</summary>
+			<p class="a2">Команды из России в партнерстве с разработчиками из разных стран: Lager Team, AircGroup Studio</p>
 		</details>
 	</div>
+
+	
+
+	<div class="card">
+		<p class="uridicheskayinfo">Сайленс Тим,<br>
+		Российская Федерация</p>
+	</div>
 </body>
+<script type="text/javascript">
+	let language = navigator.languages;
+	console.log(navigator.languages)
+
+	if ("ru" == language[0] || "ru-RU" == language[0]) {}
+	else {
+		document.querySelector('title').innerHTML = "DDLC: Survival Club"
+		document.querySelector('.quote').innerHTML = "Sometimes even to live is an act of courage.";
+		document.querySelector('.author').innerHTML = "- Seneca";
+		document.querySelector('.description').innerHTML = "In this modification, you will play on behalf of Sayori in the survival club, where she and all the other members of the club will have fun. As the story progresses, you will have to make fateful choices that will affect the course of the game, so be more vigilant.";
+		document.querySelector('.dateexit').innerHTML = "Release date<br>Soon";
+		document.querySelector('.q1').innerHTML = "How calculated is the play?";
+		document.querySelector('.a1').innerHTML = "8 hours";
+		document.querySelector('.q2').innerHTML = "Who are developer modification?";
+		document.querySelector('.a2').innerHTML = "Teams from Russia with partners from others country: Lager Team, AircGroup Studio";
+		document.querySelector('.uridicheskayinfo').innerHTML = "Silence Team<br>Russia Federation";
+		let fastMenu = ["Trailer", "Screenshots", "Download", "Answers"];
+		for (let i = 0; i < document.querySelectorAll(".menu_ul li a").length;i++){
+			document.querySelectorAll(".menu_ul li a")[i].innerHTML = fastMenu[i]
+		}
+	}
+</script>
 </html>

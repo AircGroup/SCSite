@@ -4,24 +4,30 @@
 Нижнеколымский район, поселок Черский, Ул.Таврата, дом 12, кватира 15.
 Электронная почта по приему претензий: aircgroupstudio@gmail.com.
 
-СЗ ФЛ Имаев Артемий Дмитриевич.
+Физическое Лицо Имаев Артемий Дмитриевич.
 */
 
 body {
 	margin: 0;
 	font-family: basic;
-	background-color: #d3d3d3;
+	background-color: #a3a3a3;
 	color: white;
+}
+.anchor{
+  display: block;
+  height: 115px; /*same height as header*/
+  margin-top: -115px; /*same height as header*/
+  visibility: hidden;
 }
 
 @font-face {
-    font-family: basic; 
-    src: url("comic.ttf"); 
+	font-family: basic; 
+	src: url("main.ttf"); 
 }
 
 @font-face {
 	font-family: title; 
-	src: url("main.ttf"); 
+	src: url("title.ttf"); 
 }
 
 @keyframes startBack {
@@ -31,6 +37,72 @@ body {
 	to {
 		background-image: url("2.avif");
 	}
+}
+
+a{
+	text-decoration: none;
+}
+
+#header {
+	z-index: 10;
+	opacity: 1;
+	position: fixed;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	background-color: #FFF6F7;
+	font-weight: bold;
+	transition: 0.6s ease-out;
+	border-radius: 0 0 30px 0;
+}
+
+.logo {
+	margin-left: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 60px;
+	height: 60px;
+	filter: none;
+	filter: blur(0);
+	-webkit-filter: blur(0);
+	transition: 0.6s ease-out;
+	background-color: #FFF6F7;
+	border: solid 1px #000;
+	border-radius: 10px;
+}
+
+.menu {
+	padding-left: 10px;
+	flex-grow: 1;
+}
+
+.menu ul {
+	display: flex;
+	flex-flow: row nowrap;
+	margin: 2px 0 0;
+	padding: 0px;
+	font-size: 16px;
+	line-height: 18px;
+	list-style: none;
+}
+
+.menu a {
+	display: block;
+	font-family: title;
+	padding: 8px 10px;
+	text-transform: uppercase;
+	letter-spacing: .27em;
+	transition: 0.6s ease-out;
+	color: #000;
+}
+.menu a:hover{
+	color: #A3A3A3;
+	animation-delay: 1;
+}
+
+.menu ul li {
+	font-size: 20px;
+	padding-left: 50px;
 }
 
 .first-card {
@@ -75,7 +147,7 @@ body {
 	width: 100%;
 	align-items: center;
 	justify-content: center;
-	background-color: #d3d3d3;
+	background-color: #a3a3a3;
 }
 
 .screenblock {
@@ -87,13 +159,13 @@ body {
 }
 
 .ShadowGrandient {
-	box-shadow: 0 0 80vh 0 #d3d3d3;
+	box-shadow: 0 0 80vh 0 #a3a3a3;
 }
 
 .trailer {
 	width: 70vw;
 	border: 0px solid #000;
-	border-radius: 30px;
+	border-radius: 10px;
 }
 
 .description {
@@ -113,13 +185,36 @@ details {
 }
 
 details summary {
-	list-style: none;
+	font-size: 28px;
 }
 
-details p img {
-	width: 100px;
-	height: 100px;
-	margin: 10px;
+details p {
+	font-size: 18px;
+}
+
+.dateexit {
+	font-size: 40px;
+	text-align: justify;
+	text-shadow: 0px 0px 5px #000;
+}
+
+.end {
+	width: 70vw;
+	margin: auto;
+	border: 0px solid #000;
+	border-radius: 10px;
+	background-image: url('7.avif');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.uridicheskayinfo {
+	text-align: justify;
+	width: 70vw;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	font-size: 10px;
 }
 
 @media only screen and (min-width: 801px){
@@ -127,6 +222,45 @@ details p img {
 		font-size: 25px;
 	}
 }
+
+@media only screen and (max-width: 975px){
+	#header{
+		border-radius: 0;
+	}
+	.menu {
+		display: block;
+		position: absolute;
+		top: 68px;
+		height: calc(100vh - 68px);
+		left: 0;
+		background: #FFF6F7;
+		width: 270px;
+		box-shadow: 0 4px 2px -2px rgba(36, 36, 36, 0.37);
+		transition: all 0.4s ease;
+		left:-100%;
+	}
+	.menu ul{
+		flex-flow: column;
+		margin-top: 30px;
+		height: calc(100% - 30px);
+	}
+	.menu ul li{
+		padding-left: 0;
+		margin-right: 10px;
+		border: solid 0px #000;
+		border-width: 0 0 1px 0;
+	}
+	.menu{
+		display: block;
+	}
+	.menu.open-menu{
+		left: 0px;
+	}
+	.fixed-page {
+		overflow: hidden;
+	}
+}
+
 
 @media only screen and (max-width: 800px){
 	* {
@@ -151,10 +285,17 @@ details p img {
 	details {
 		width: 90vw;
 	}
+	.end {
+		width: 90vw;
+	}
 }
 
 @media only screen and (max-width: 550px){
 	* {
 		font-size: 15px;
+	}
+	.menu{
+		font-size: 20px;
+		width: 180px;
 	}
 }
